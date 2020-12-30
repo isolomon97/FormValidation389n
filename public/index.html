@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Research Institute</title>
+    <link rel=stylesheet href="./css/researchForm.css" />
+
+    <script src="./js/researchFormValidation.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Research Form</h1>
+    </header>
+
+    <section>
+    <form id="myForm" action="/processForm" method="POST">
+
+        <fieldset id="generalInfoSection">
+        <legend id="generalInfoLegend">
+            General Information
+        </legend>
+        
+        <label>Firstname:
+            <input type="text" name="firstname" autofocus required />
+        </label>
+
+        <label>Lastname:
+            <input type="text" name="lastname" required />
+        </label>
+
+        <br>
+        <br>
+
+        <label>Phone:
+            <input type="tel" id="phoneFirstPart" name="phoneFirstPart" maxlength="3" size="3" required/>
+
+        </label>
+        -
+        <label>
+            <input type="tel" id="phoneSecondPart" name="phoneSecondPart" maxlength="3" size="3" required/>
+
+        </label>
+        -
+        <label>
+            <input type="tel" id="phoneThirdPart" name="phoneThirdPart" maxlength="4" size="4" required/>
+
+        </label>
+
+        <label>Email:
+            <input type="email" id="email" name="email" required />
+
+        </label>
+
+
+    </fieldset>
+
+    <fieldset id="studyDataSection">
+
+        <legend id="studyDataLegend">
+            Research Study Data
+        </legend>
+
+        <fieldset id="bodySection">
+            <legend id="bodyLegend">
+                Age/Height/Weight
+            </legend>
+
+            <label> <strong>Age:</strong>
+                <input type="number" id="age" min="1" max="125" name="age" required>
+            </label>
+
+
+            <label id="heightFeet"><strong>Height:</strong>
+                <input type="number"  min="2" max="7" name="heightFeet" id="feetBox" required>
+
+            </label>
+            <em>Feet</em>
+
+            <label id="heightInches">
+                <input type="number"  min="0" max="11" name="heightInches" id="inchesBox" required>
+
+            </label>
+            <em>Inches</em>
+
+            <label id="weight"><strong>Weight:</strong>
+                <input type="number" min="1" max="600" name="weight" id="weightBox" required>
+
+            </label>
+            <em>Pounds</em>
+
+
+        </fieldset>
+
+        <fieldset id="conditionsSection">
+            <legend id="conditionsLegend">
+                Conditions
+            </legend>
+            
+            Which of the following conditions are present in your family? (Check all that apply)
+
+            <br>
+            
+            <input type="checkbox" id="bloodPressure" name="highBloodPressure" value="HighBloodPressure">
+            <label>
+                 High Blood Pressure
+            </label>
+
+            <input type="checkbox" id="diabetes" name="diabetes" value="Diabetes"> 
+            <label>
+                Diabetes
+            </label>
+
+            <input type="checkbox" id="glaucoma" name="glaucoma" value="Glaucoma">
+            <label>
+                 Glaucoma
+            </label>
+
+            <input type="checkbox" name="asthma" id="asthma" value="Asthma">
+            <label>
+                 Asthma
+            </label>
+            
+            <input type="checkbox" name="none" id="none" value="None"> 
+            <label>
+                 None
+            </label>
+
+        </fieldset>
+
+        <fieldset id="timeSection">
+            <legend id="timeLegend">
+                Time Period
+            </legend>
+
+            How long have you experienced any of the above conditions?
+
+            <br>
+
+            <input type="radio" name="period" value="never" id="never"/>
+            <label >
+                 Never
+            </label>
+
+            <input type="radio" name="period" value="LessThanAYear" id="lessThan"/>
+            <label >
+                 Less than a year
+            </label>
+
+            <input type="radio" name="period" value="OneToTwoYears" id="oneToTwo"/>
+            <label >
+                 One to two years
+            </label>
+
+            <input type="radio" name="period" value="MoreThanTwoYears" id="moreThan"/>
+            <label >
+                 More than two years
+            </label>
+
+
+
+
+        </fieldset>
+
+        <fieldset id="studySection">
+            <legend id="studyLegend">
+                Study Information
+            </legend>
+
+            Which study are you taking part of?
+
+            <select name="studyType">
+                <option value="ShortTerm"> Short Term </option>
+                <option value="LongTerm" selected="selected">Long Term</option>
+
+            </select>
+
+            <label id="studyIdFirst">
+                Assigned Study Id:
+                <input type="text" minlength="0" maxlength="4" size="4" name="firstFourDigits" id="firstFourDigits" required>
+            </label>
+            - 
+            <label id="studyIdSecond">
+                <input type="text" minlength="0" maxlength="4" size="4" name="secondFourDigits" id="secondFourDigits" required>
+
+            </label>
+
+
+            
+
+
+        </fieldset>
+
+        <fieldset id="additional">
+            <legend id="additionalLegend">
+                Additional Information (Comments)
+
+            </legend>
+
+
+            <textarea id="commentArea" rows="5" cols="65" name="comments"></textarea>
+
+        </fieldset>
+
+
+    </fieldset>
+
+    <fieldset>
+        <label id="clearButton">
+            <input type="reset" value="Clear Form">
+
+        </label>
+
+        <label id="submitButton">
+            <input type="submit" value="Submit Information">
+
+        </label>
+    </fieldset>
+
+
+
+    </form>
+    </section>
+
+    <footer>
+        CMSC Research Institute &reg;
+    </footer>
+</body>
+
+</html>

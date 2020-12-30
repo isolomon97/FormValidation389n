@@ -1,0 +1,57 @@
+/* place your css rules here */
+
+
+#generalInfoLegend{
+    font-style: italic;
+    color: #A0522D;
+    
+}
+
+
+#studyDataLegend{
+    font-style: italic;
+    color: #A0522D;
+}
+
+
+#conditionsLegend{
+    color: #A0522D;
+}
+
+#timeLegend{
+    color: #A0522D;
+}
+
+#studyLegend{
+    color: #A0522D;
+}
+
+#additionalLegend{
+    color: #A0522D;
+}
+
+
+#age{
+    width: 3em;
+}
+
+#heightFeet{
+    margin-left: 2.7em;
+}
+
+#feetBox{
+    width: 2.7em;
+}
+
+
+#inchesBox{
+    width: 3em;
+}
+
+#weight{
+    margin-left: 2.3em;
+}
+
+#studyIdFirst{
+    margin-left: .8em;
+}
